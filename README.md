@@ -37,9 +37,9 @@ The recommendation engine combines collaborative tag vectorization with player c
    $$\text{Lift} = \frac{P(\text{tag} \mid \text{cluster})}{P(\text{tag})}$$
    The top distinctive tags automatically label each cluster (e.g., *Cluster 3: RTS & Tactical Fans*).
 4. **Scoring & Filtering**:
-   - Computes an implicit affinity score based on playtime over global average: $\log(1 + \text{playtime} / \text{avg\char`_playtime})$.
+   - Computes an implicit affinity score based on playtime over global average: $\log(1 + \text{playtime} / \text{avg-playtime})$.
    - Applies cluster preference weighting while penalizing ubiquitous titles:
-     $\text{Score} = \frac{\text{cluster\char`_score}^{1.2}}{\ln(1 + \text{global\char`_score})}$
+     $\text{Score} = \frac{\text{cluster-score}^{1.2}}{\ln(1 + \text{global-score})}$
    - Filters out already-owned games and ubiquitous titles (owned by >20% of users) to output top-10 recommendations per player.
 
 ---
