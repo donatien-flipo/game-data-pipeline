@@ -1,0 +1,12 @@
+# Core Dependencies for Ingestion & API interaction
+requests>=2.31.0
+boto3>=1.34.0
+python-dotenv>=1.0.0
+
+# Big Data Compute & ML (for local standalone testing)
+pyspark>=3.5.0
+delta-spark>=3.1.0
+numpy>=1.26.0
+
+# Orchestration (for local DAG testing outside container)
+apache-airflow>=2.9.0

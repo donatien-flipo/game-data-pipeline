@@ -1,0 +1,10 @@
+FROM apache/spark:3.5.1-python3
+
+USER root
+# Installation de numpy et delta-spark
+RUN pip3 install --no-cache-dir numpy delta-spark==3.1.0
+
+# On ne télécharge plus les JARs manuellement ici
+# Sauf éventuellement celui d'Elasticsearch s'il n'est pas bien résolu via Maven
+USER spark
+WORKDIR /opt/spark_jobs
